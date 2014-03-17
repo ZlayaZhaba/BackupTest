@@ -89,7 +89,7 @@
       <Feature Id="XervBackupProgramFilesShortCutFeature" Title="Program Files Shortcut" Level="1" Description ="Installs a shortcut to XervBackup in the Program Files menu" Absent="allow" AllowAdvertise="no" TypicalDefault="install" InstallDefault="local">
         <ComponentRef Id="XervBackupProgramMenuShortcutComponent"/>
       </Feature>
-      <ComponentGroupRef Id="DUPLICATIBIN" />
+      <ComponentGroupRef Id="XERVBACKUPBIN" />
     </Feature>
     
     <Feature Id="XervBackupStartupShortCutFeature" Title="Launch XervBackup at startup" Level="1" Description ="Automatically launches XervBackup when you log on to the computer" Absent="allow" AllowAdvertise="no" TypicalDefault="install" InstallDefault="local">
@@ -98,41 +98,41 @@
 
     <Feature Id="LanguageFeature" Title="XervBackup translations" Level="1" Description="Installs user interface translations for XervBackup." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local">
       <Feature Id="da_DK_LanguageFeature" Title="Danish translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Danish (da-DK)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_da_DK" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_da_DK" />
       </Feature>
       <Feature Id="pt_BR_LanguageFeature" Title="Portugese Brazilian translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Portugese Brazilian (pt-BR)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_pt_BR" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_pt_BR" />
       </Feature>
       <Feature Id="fr_FR_LanguageFeature" Title="French translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in French (fr-FR)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_fr_FR" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_fr_FR" />
       </Feature>
       <Feature Id="de_DE_LanguageFeature" Title="German translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in German (de-DE)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_de_DE" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_de_DE" />
       </Feature>
       <Feature Id="es_ES_LanguageFeature" Title="Spanish translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Spanish (es-ES)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_es_ES" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_es_ES" />
       </Feature>
       <Feature Id="it_IT_LanguageFeature" Title="Italian translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Italian (it-IT)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_it_IT" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_it_IT" />
       </Feature>
       <Feature Id="zh_CN_LanguageFeature" Title="Chinese translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Chinese (zh-CN)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_zh_CN" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_zh_CN" />
       </Feature>
       <Feature Id="ru_RU_LanguageFeature" Title="Russian translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Russian (ru-RU)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_ru_RU" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_ru_RU" />
       </Feature>
       <Feature Id="zh_HK_LanguageFeature" Title="Chinese translation files" Level="1" Description="Installs the required files for displaying the XervBackup userinterface in Chinese (zh-HK)." AllowAdvertise="no" TypicalDefault="install" InstallDefault="local" >
-        <ComponentGroupRef Id="DUPLICATI_LANG_zh_HK" />
+        <ComponentGroupRef Id="XERVBACKUP_LANG_zh_HK" />
       </Feature>
     </Feature>
 
     <!-- Launch XervBackup setup -->
     <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch XervBackup now" />
     <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1" />
-    <CustomAction Id="LaunchApplication" FileKey="FILE_DUPLICATI_MAIN_EXE" Impersonate="yes" ExeCommand="" Return="asyncNoWait" />
+    <CustomAction Id="LaunchApplication" FileKey="FILE_XERVBACKUP_MAIN_EXE" Impersonate="yes" ExeCommand="" Return="asyncNoWait" />
     
     <!-- TODO: Figure out why this does not work...
-    <Property Id="WixShellExecTarget" Value="[#comp_DUPLICATIBIN_5]" />
+    <Property Id="WixShellExecTarget" Value="[#comp_XERVBACKUPBIN_5]" />
     <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" /> 
     -->
 

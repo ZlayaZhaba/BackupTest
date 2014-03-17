@@ -57,7 +57,7 @@ namespace XervBackup.Library.Backend
         private bool m_warnedLeadingSlash;
         private bool m_warnedBackslash;
 
-        private const string DUPLICATI_ACTION_MARKER = "*XervBackup-action*";
+        private const string XERVBACKUP_ACTION_MARKER = "*XervBackup-action*";
         private string m_uiAction = null;
 
         private static System.Text.RegularExpressions.Regex HashRegEx = new System.Text.RegularExpressions.Regex("[^0-9a-fA-F]");
@@ -171,7 +171,7 @@ namespace XervBackup.Library.Backend
             if (!m_options.ContainsKey(HAS_WARNED_PASSWORD) || !bool.TryParse(m_options[HAS_WARNED_PASSWORD], out m_warnedPassword))
                 m_warnedPassword = false;
 
-            m_options.TryGetValue(DUPLICATI_ACTION_MARKER, out m_uiAction);
+            m_options.TryGetValue(XERVBACKUP_ACTION_MARKER, out m_uiAction);
         }
 
         private bool ValidateForm()
@@ -332,7 +332,7 @@ namespace XervBackup.Library.Backend
             if (hasInitial)
                 m_options[INITIALPASSWORD] = initialPwd;
             if (!string.IsNullOrEmpty(m_uiAction))
-                m_options.Add(DUPLICATI_ACTION_MARKER, m_uiAction);
+                m_options.Add(XERVBACKUP_ACTION_MARKER, m_uiAction);
         }
 
         private void TestConnection_Click(object sender, EventArgs e)

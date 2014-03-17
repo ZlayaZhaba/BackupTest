@@ -31,12 +31,12 @@ namespace XervBackup.GUI
         /// <summary>
         /// The name of the environment variable that holds the path to the data folder used by XervBackup
         /// </summary>
-        public const string DATAFOLDER_ENV_NAME = "DUPLICATI_HOME";
+        public const string DATAFOLDER_ENV_NAME = "XERVBACKUP_HOME";
 
         /// <summary>
         /// The environment variable that holdes the database key used to encrypt the SQLite database
         /// </summary>
-        public const string DB_KEY_ENV_NAME = "DUPLICATI_DB_KEY";
+        public const string DB_KEY_ENV_NAME = "XERVBACKUP_DB_KEY";
 
         /// <summary>
         /// Gets the folder where XervBackup data is stored
@@ -142,7 +142,7 @@ namespace XervBackup.GUI
                 //
                 //If you desire better security, start XervBackup once with the commandline option
                 // --unencrypted-database to decrypt the database.
-                //Then set the environment variable DUPLICATI_DB_KEY to the desired key, 
+                //Then set the environment variable XERVBACKUP_DB_KEY to the desired key, 
                 // and run XervBackup again without the --unencrypted-database option 
                 // to re-encrypt it with the new key
                 //
@@ -198,7 +198,7 @@ namespace XervBackup.GUI
                 XervBackup.Library.Logging.Log.CurrentLog = new XervBackup.Library.Logging.StreamLog(commandlineOptions["log-file"]);
             }
 
-            //Set the %DUPLICATI_HOME% env variable, if it is not already set
+            //Set the %XERVBACKUP_HOME% env variable, if it is not already set
             if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable(DATAFOLDER_ENV_NAME)))
             {
 #if DEBUG

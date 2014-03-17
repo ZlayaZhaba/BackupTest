@@ -59,8 +59,8 @@ for /D %%d in ("compiled\*") do call :langbuild %%d
 cd "..\..\Installer"
 
 REM Create incBinFiles.wxs if required
-REM Does NOT set the FILE_DUPLICATI_MAIN_EXE id on the main file, which is required to build the MSI
-if not exist incBinFiles.wxs "%PARAFFIN_EXE%" -dir bin\Release\XervBackup -groupname DUPLICATIBIN -dirref INSTALLLOCATION -ext .pdb -ext .0 -alias bin\Release\XervBackup -norootdirectory -multiple -Win64var "$(var.Win64)" incBinFiles.wxs 
+REM Does NOT set the FILE_XERVBACKUP_MAIN_EXE id on the main file, which is required to build the MSI
+if not exist incBinFiles.wxs "%PARAFFIN_EXE%" -dir bin\Release\XervBackup -groupname XERVBACKUPBIN -dirref INSTALLLOCATION -ext .pdb -ext .0 -alias bin\Release\XervBackup -norootdirectory -multiple -Win64var "$(var.Win64)" incBinFiles.wxs 
 
 REM Update version
 if exist incBinFiles.PARAFFIN del incBinFiles.PARAFFIN
@@ -108,7 +108,7 @@ for /f "tokens=*" %%a in ("%1") do set FOLDERNAME=%%~na
 SET LANG_WXS_NAME=%ORIGIN_PATH%\incLocFiles.%FOLDERNAME%.wxs
 SET LANG_PRF_NAME=%ORIGIN_PATH%\incLocFiles.%FOLDERNAME%.PARAFFIN
 
-if not exist "%LANG_WXS_NAME%" "%PARAFFIN_EXE%" -dir %1 -alias ..\XervBackup\Localization\%1 -groupname DUPLICATI_LANG_%FOLDERNAME% -dirref INSTALLLOCATION "%LANG_WXS_NAME%" -Win64var "$(var.Win64)" -multiple -ext .pdb -direXclude .svn
+if not exist "%LANG_WXS_NAME%" "%PARAFFIN_EXE%" -dir %1 -alias ..\XervBackup\Localization\%1 -groupname XERVBACKUP_LANG_%FOLDERNAME% -dirref INSTALLLOCATION "%LANG_WXS_NAME%" -Win64var "$(var.Win64)" -multiple -ext .pdb -direXclude .svn
 if exist "%LANG_PRF_NAME%" del "%LANG_PRF_NAME%"
 "%PARAFFIN_EXE%" -update "%ORIGIN_PATH%\incLocFiles.%FOLDERNAME%.wxs"
 if exist "%LANG_PRF_NAME%" xcopy /I /Y "%LANG_PRF_NAME%" "%LANG_WXS_NAME%"

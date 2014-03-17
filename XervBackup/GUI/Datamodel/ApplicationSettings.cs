@@ -183,7 +183,7 @@ namespace XervBackup.Datamodel
             get
             {
                 if (XervBackup.Library.Utility.Utility.IsClientLinux)
-                    return System.IO.Path.Combine(Environment.ExpandEnvironmentVariables("%DUPLICATI_HOME%").TrimStart('"').TrimEnd('"'), "Signature Cache");
+                    return System.IO.Path.Combine(Environment.ExpandEnvironmentVariables("%XERVBACKUP_HOME%").TrimStart('"').TrimEnd('"'), "Signature Cache");
                 else
                     return System.IO.Path.Combine(System.IO.Path.Combine(Environment.ExpandEnvironmentVariables(System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)), "XervBackup"), "Signature Cache");                
             }

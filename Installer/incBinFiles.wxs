@@ -5,7 +5,7 @@
   <WARNING>Manual changes to this file may cause incorrect behavior.</WARNING>
   <CreatedOn>13-12-2010 11:10</CreatedOn>
   <ParaffinFileVersion>2</ParaffinFileVersion>
-  <GroupName>DUPLICATIBIN</GroupName>
+  <GroupName>XERVBACKUPBIN</GroupName>
   <Directory>bin\Release\XervBackup\</Directory>
   <DirAlias>bin\Release\XervBackup\</DirAlias>
   <Win64>$(var.Win64)</Win64>
@@ -21,7 +21,7 @@
   <IncludeFiles />
 </CommandLineOptions>-->
   <Fragment>
-    <ComponentGroup Id="DUPLICATIBIN">
+    <ComponentGroup Id="XERVBACKUPBIN">
       <ComponentRef Id="comp_2F257D6E521E467CBDEDCCBBFFEFDE3F" />
       <ComponentRef Id="comp_F014E8B59F1C4F30B1691C46494B25BD" />
       <ComponentRef Id="comp_9AFD6C8AB2C7473F83856604557B0A74" />
@@ -35,7 +35,7 @@
         <File Id="file_909AF4E8C8D7405DBE350591F77DED12" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.CommandLine.Decrypter.exe" />
         <File Id="file_62468D5742DF477D9859D4AC441FBEBF" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.CommandLine.exe" />
         <File Id="file_7667015F752743DB849E2943EB06F41D" Source="bin\Release\XervBackup\XervBackup.CommandLine.exe.config" />
-        <File Id="FILE_DUPLICATI_MAIN_EXE" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.exe" />
+        <File Id="FILE_XERVBACKUP_MAIN_EXE" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.exe" />
         <File Id="file_D61FCE5C0A894730B113ACDA6D67BC27" Source="bin\Release\XervBackup\XervBackup.exe.config" />
         <File Id="file_1C6A6608CDAB466288709680FBBA93AE" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.Library.Backend.BackendInterface.dll" />
         <File Id="file_62FA567AB8334448832D324AAD8A43FF" Checksum="yes" Source="bin\Release\XervBackup\XervBackup.Library.Backend.BackendLoader.dll" />
